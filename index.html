@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>政治主义倾向测试 - 全面政治意识形态评估</title>
+    <style>
+        :root {
+            --bg: #0f0f1a;
+            --card-bg: #1a1a2e;
+            --card-bg2: #1e1e35;
+            --accent: #d4a853;
+            --accent2: #c49b3f;
+            --text: #e0dcc8;
+            --text-secondary: #a9a58b;
+            --progress-bg: #2a2a40;
+            --progress-fill: linear-gradient(90deg, #c49b3f, #e0b860, #c49b3f);
+            --btn-bg: #2a2a40;
+            --btn-hover: #3a3a55;
+            --border: #2e2e44;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --red: #c85555;
+            --blue: #5588c8;
+            --green: #55a87a;
+            --purple: #8b6baf;
+            --orange: #d4854a;
+            --teal: #4ea5a0;
+            --pink: #c870a0;
+            --gold: #c4a44a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', 'STSong', 'Songti SC', 'SimSun', serif;
+            background: var(--bg);
+            background-image:
+                radial-gradient(ellipse at 20% 20%, rgba(196, 155, 63, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, rgba(139, 107, 175, 0.05) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 50%, rgba(85, 136, 200, 0.04) 0%, transparent 70%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 720px;
+            position: relative;
+        }
+
+        /* Start Page */
+        .start-page {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            animation: fadeInUp 0.6s ease;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes toastIn {
+            from {
+              opacity: 0;
+              transform: translateX(-50%) translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(-50%) translateY(0);
+              }
+        }
+
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .start-page .icon-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2a2a3a, #1a1a2e);
+            border: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 48px;
+            box-shadow: 0 0 40px rgba(196, 155, 63, 0.2);
+        }
+        .start-page h1 {
+            font-size: 2.2em;
+            color: var(--accent);
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+            font-weight: normal;
+        }
+        .start-page .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .start-page .desc {
+            color: var(--text-secondary);
+            font-size: 0.92em;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .start-page .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+        .start-page .feature-tag {
+            background: var(--btn-bg);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .start-page .feature-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .btn-start {
+            display: inline-block;
+            padding: 16px 50px;
+            background: linear-gradient(135deg, #c49b3f, #a87f2f);
+            color: #1a1a1a;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.15em;
+            cursor: pointer;
+            letter-spacing: 2px;
+            font-family: inherit;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(196, 155, 63, 0.3);
+            font-weight: bold;
+        }
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(196, 155, 63, 0.45);
+            background: linear-gradient(135deg, #d4a84a, #b8903a);
+        }
+        .btn-start:active {
+            transform: scale(0.97);
+        }
+
+        /* Quiz Page */
+        .quiz-page {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .quiz-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .progress-bar-wrap {
+            background: var(--progress-bg);
+            border-radius: 10px;
+            height: 6px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--progress-fill);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+        }
+        .quiz-header .q-num {
+            color: var(--accent);
+            font-size: 1.1em;
+        }
+        .quiz-question {
+            font-size: 1.2em;
+            margin-bottom: 28px;
+            line-height: 1.7;
+            color: var(--text);
+            letter-spacing: 0.5px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        .options-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .option-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 15px 20px;
+            background: var(--btn-bg);
+            border: 1px solid transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.25s;
+            font-family: inherit;
+            font-size: 0.95em;
+            color: var(--text);
+            text-align: left;
+            letter-spacing: 0.5px;
+            width: 100%;
+        }
+        .option-btn:hover {
+            background: var(--btn-hover);
+            border-color: var(--border);
+            transform: translateX(4px);
+        }
+        .option-btn.selected {
+            background: #2a2a38;
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(196, 155, 63, 0.15);
+            color: var(--accent);
+        }
+        .option-btn .opt-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            flex-shrink: 0;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .option-btn.selected .opt-dot {
+            border-color: var(--accent);
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(196, 155, 63, 0.5);
+        }
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            gap: 15px;
+        }
+        .btn-nav {
+            padding: 12px 28px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.95em;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+            background: var(--btn-bg);
+            color: var(--text);
+        }
+        .btn-nav:hover {
+            background: var(--btn-hover);
+            border-color: var(--accent);
+        }
+        .btn-nav:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        .btn-nav.primary {
+            background: linear-gradient(135deg, #c49b3f, #a87f2f);
+            color: #1a1a1a;
+            border: none;
+            font-weight: bold;
+        }
+        .btn-nav.primary:hover {
+            box-shadow: 0 4px 20px rgba(196, 155, 63, 0.35);
+        }
+
+        /* Results Page */
+        .results-page {
+            display: none;
+            animation: fadeInUp 0.6s ease;
+        }
+        .results-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .results-card h2 {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.8em;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        .results-card .result-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        .top-result {
+            background: var(--card-bg2);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+        .top-result.highlight {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(196, 155, 63, 0.2);
+            background: linear-gradient(135deg, #1e1e35, #252538);
+        }
+        .top-result .rank-badge {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: rgba(196, 155, 63, 0.2);
+            letter-spacing: 0;
+            line-height: 1;
+        }
+        .top-result .ideology-name {
+            font-size: 1.25em;
+            color: var(--accent);
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .top-result .score-bar-wrap {
+            background: var(--progress-bg);
+            border-radius: 6px;
+            height: 8px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .top-result .score-bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.8s ease;
+        }
+        .top-result .score-text {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+        }
+        .top-result .explanation {
+            font-size: 0.88em;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            line-height: 1.7;
+        }
+        .bar-colors {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+        }
+        .results-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .btn-restart {
+            padding: 14px 35px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1em;
+            letter-spacing: 2px;
+            background: var(--btn-bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            transition: all 0.3s;
+        }
+        .btn-restart:hover {
+            border-color: var(--accent);
+            background: var(--btn-hover);
+        }
+        .btn-restart.primary {
+            background: linear-gradient(135deg, #c49b3f, #a87f2f);
+            color: #1a1a1a;
+            border: none;
+            font-weight: bold;
+        }
+        .all-scores-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        @media (max-width: 600px) {
+            .all-scores-grid {
+                grid-template-columns: 1fr;
+            }
+            .start-page {
+                padding: 30px 20px;
+            }
+            .quiz-card {
+                padding: 25px 20px;
+            }
+            .results-card {
+                padding: 25px 20px;
+            }
+            .start-page h1 {
+                font-size: 1.6em;
+            }
+            .quiz-question {
+                font-size: 1.05em;
+            }
+        }
+        .all-score-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            transition: background 0.2s;
+        }
+        .all-score-row:hover {
+            background: var(--btn-bg);
+        }
+        .all-score-row .mini-bar {
+            width: 60px;
+            height: 4px;
+            background: var(--progress-bg);
+            border-radius: 2px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .all-score-row .mini-fill {
+            height: 100%;
+            border-radius: 2px;
+        }
+        .hidden {
+            display: none !important;
+        }
+
+        /* toast */
+        .toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2a2a3a;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            z-index: 999;
+            animation: toastIn 0.3s ease, fadeOut 0.3s ease 2s forwards;
+            pointer-events: none;
+        }
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Start Page -->
+        <div class="start-page" id="startPage">
+            <div class="icon-circle">⚖️</div>
+            <h1>政治主义倾向测试</h1>
+            <p class="subtitle">—— 全面政治意识形态评估 ——</p>
+            <p class="desc">
+                本测试包含 <strong>50</strong> 道精心设计的问题，涵盖经济制度、政府权力、社会文化、
+                国际关系与变革路径五大维度，评估您与 <strong>41种</strong> 政治意识形态的契合度。
+            </p>
+            <div class="feature-list">
+                <span class="feature-tag">📊 41种意识形态</span>
+                <span class="feature-tag">📝 50道选择题</span>
+                <span class="feature-tag">📖 详细解读</span>
+                <span class="feature-tag">🎯 精准匹配</span>
+                <span class="feature-tag">⏱ 约15分钟</span>
+            </div>
+            <button class="btn-start" onclick="startQuiz()">开 始 测 试</button>
+        </div>
+
+        <!-- Quiz Page -->
+        <div class="quiz-page" id="quizPage">
+            <div class="quiz-card">
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+                <div class="quiz-header">
+                    <span>第 <span class="q-num" id="qNum">1</span> / 50 题</span>
+                    <span id="qCat"></span>
+                </div>
+                <div class="quiz-question" id="qText"></div>
+                <div class="options-group" id="optionsGroup"></div>
+                <div class="quiz-nav">
+                    <button class="btn-nav" id="btnPrev" onclick="prevQuestion()" disabled>← 上一题</button>
+                    <button class="btn-nav primary" id="btnNext" onclick="nextQuestion()">下一题 →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Page -->
+        <div class="results-page" id="resultsPage">
+            <div class="results-card">
+                <h2>📋 测试结果</h2>
+                <p class="result-subtitle">您的政治意识形态倾向分析报告</p>
+                <div id="topResults"></div>
+                <div class="all-scores-grid" id="allScores"></div>
+                <div class="results-actions">
+                    <button class="btn-restart primary" onclick="restartQuiz()">🔄 重新测试</button>
+                    <button class="btn-restart" onclick="window.print()">🖨 打印报告</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==================== IDEOLOGY DEFINITIONS ====================
+        const ideologies = [
+            { id: 'liberalism', name: '自由主义', desc: '强调个人自由、权利和法治，主张有限政府和市场经济，认为个人应当在法律框架内享有最大限度的自由。', color: '#5b9bd5' },
+            { id: 'conservatism', name: '保守主义', desc: '重视传统、秩序和稳定，对社会变革持谨慎态度，强调既有制度和文化遗产的价值。', color: '#7b9cc0' },
+            { id: 'socialism', name: '社会主义', desc: '主张生产资料社会所有，追求经济平等和社会正义，强调集体利益和公共服务。', color: '#d45a5a' },
+            { id: 'communism', name: '共产主义', desc: '追求无阶级社会，主张废除私有财产，通过革命推翻资本主义制度，实现各尽所能、按需分配。', color: '#c0392b' },
+            { id: 'anarchism', name: '无政府主义', desc: '反对一切形式的强制性权威和等级制度，主张自愿合作和自组织的社会秩序。', color: '#2c2c2c' },
+            { id: 'fascism', name: '法西斯主义', desc: '极端民族主义与威权主义结合，强调国家至上、领袖崇拜和军国主义，压制个人自由。', color: '#4a3728' },
+            { id: 'national_socialism', name: '国家社会主义', desc: '将极端民族主义与社会主义修辞结合，强调种族优越论、国家控制和领土扩张。', color: '#5c3a1e' },
+            { id: 'populism', name: '民粹主义', desc: '诉诸"人民"对抗"精英"，强调大众意愿的直接表达，常伴有反建制和反智倾向。', color: '#e8963a' },
+            { id: 'nationalism', name: '民族主义', desc: '将民族利益置于首位，强调民族认同、主权和文化统一，可能从温和爱国到极端排外。', color: '#3a7d44' },
+            { id: 'capitalism', name: '资本主义', desc: '以私有制、自由市场和利润驱动为核心，强调竞争、创新和资本积累的经济制度。', color: '#2980b9' },
+            { id: 'imperialism', name: '帝国主义', desc: '通过军事、经济或文化手段扩张国家影响力，建立对其他国家或地区的支配关系。', color: '#6b3a5b' },
+            { id: 'totalitarianism', name: '极权主义', desc: '国家对社会生活进行全面控制，不允许任何独立的社会组织或思想存在。', color: '#3d1a1a' },
+            { id: 'authoritarianism', name: '威权主义', desc: '政治权力高度集中，限制政治多元化和公民自由，但允许一定的经济和社会自主空间。', color: '#5c4033' },
+            { id: 'militarism', name: '军国主义', desc: '将军事实力和军事价值观置于社会核心地位，强调纪律、等级和武力解决问题。', color: '#4a5a3a' },
+            { id: 'anarcho_capitalism', name: '无政府资本主义', desc: '主张完全废除国家，将所有服务（包括法律和国防）交由自由市场提供。', color: '#7a6a30' },
+            { id: 'anarcho_communism', name: '无政府共产主义', desc: '同时反对国家和资本主义，主张通过自愿共同体实现按需分配的直接共产主义。', color: '#5c2a2a' },
+            { id: 'libertarianism', name: '自由意志主义', desc: '强调个人自由至上，主张最小化政府干预，反对强制征税和过度监管。', color: '#c9a030' },
+            { id: 'social_democracy', name: '社会民主主义', desc: '在资本主义框架内通过民主手段推行福利国家、劳工保护和混合经济。', color: '#e07b7b' },
+            { id: 'democratic_socialism', name: '民主社会主义', desc: '通过民主程序实现社会主义目标，主张逐步将关键产业社会化，同时保留政治民主。', color: '#d46060' },
+            { id: 'marxism', name: '马克思主义', desc: '以历史唯物主义和阶级斗争理论为基础，分析资本主义矛盾并主张无产阶级革命。', color: '#b33a3a' },
+            { id: 'leninism', name: '列宁主义', desc: '马克思主义的发展，强调先锋党领导革命、建立无产阶级专政和帝国主义论。', color: '#9b2a2a' },
+            { id: 'stalinism', name: '斯大林主义', desc: '强调一国社会主义、高度集中的计划经济、个人崇拜和严厉的政治镇压。', color: '#7a1a1a' },
+            { id: 'maoism', name: '毛泽东主义', desc: '强调农民革命、群众路线、持续斗争和新民主主义，是马克思主义的中国化发展。', color: '#d43a1a' },
+            { id: 'trotskyism', name: '托洛茨基主义', desc: '主张不断革命论和国际主义，反对一国社会主义，批判斯大林主义官僚化。', color: '#c04a2a' },
+            { id: 'neoliberalism', name: '新自由主义', desc: '主张激进的市场化、私有化和去监管化，强调自由贸易和资本自由流动。', color: '#3a8abf' },
+            { id: 'keynesianism', name: '凯恩斯主义', desc: '主张政府通过财政和货币政策调节经济周期，在衰退时扩大支出刺激需求。', color: '#5bae8a' },
+            { id: 'mercantilism', name: '重商主义', desc: '强调贸易顺差、保护主义和国家干预经济以积累财富和增强国力。', color: '#7a8a4a' },
+            { id: 'technocracy', name: '技术官僚主义', desc: '主张由技术专家和科学家依据理性原则管理社会，以效率和科学取代政治博弈。', color: '#4a8abf' },
+            { id: 'corporatism', name: '协同主义', desc: '主张国家、资本和劳工三方协作，通过行业组织协调经济和社会政策。', color: '#6a7a5a' },
+            { id: 'feminism', name: '女性主义', desc: '追求性别平等，批判父权制度，主张消除一切形式的性别歧视和压迫。', color: '#c06a9a' },
+            { id: 'environmentalism', name: '环境主义', desc: '将生态保护置于优先地位，主张可持续发展，批判无限增长的发展模式。', color: '#3a9a5a' },
+            { id: 'cosmopolitanism', name: '世界主义', desc: '强调人类共同体的理念，主张超越民族国家界限，倡导全球公民意识和合作。', color: '#5a8ac0' },
+            { id: 'isolationism', name: '孤立主义', desc: '主张国家专注于内政，避免卷入国际事务和对外冲突，保持外交中立。', color: '#7a7a8a' },
+            { id: 'expansionism', name: '扩张主义', desc: '主张通过领土、经济或文化扩张来增强国家实力和影响力。', color: '#8a5a3a' },
+            { id: 'reformism', name: '改良主义', desc: '主张在现有制度框架内通过渐进改革实现社会进步，反对暴力革命。', color: '#5a9a8a' },
+            { id: 'revisionism', name: '修正主义', desc: '对既有理论或政策进行重新解释和调整，以适应变化的历史条件。', color: '#8a8a5a' },
+            { id: 'fundamentalism', name: '原教旨主义', desc: '坚持对某种教义或原则的严格、字面化的解释，拒绝妥协和现代诠释。', color: '#6a4a3a' },
+            { id: 'theocracy', name: '神权主义', desc: '主张宗教权威直接掌握政治权力，以宗教教义作为国家法律的基础。', color: '#4a3a6a' },
+            { id: 'feudalism', name: '封建主义', desc: '以土地所有权和人身依附关系为基础的等级社会制度，权力分散于各级领主。', color: '#6a5a4a' },
+            { id: 'individualism', name: '个人主义', desc: '将个人权利和自主性置于集体之上，强调个人责任和自我实现。', color: '#5a8ac0' },
+            { id: 'collectivism', name: '集体主义', desc: '强调集体利益优先于个人利益，主张通过团结协作实现共同目标。', color: '#c05a5a' },
+        ];
+
+        const ideologyIndex = {};
+        ideologies.forEach((ide, i) => { ideologyIndex[ide.id] = i; });
+
+        // ==================== QUESTION DATA ====================
+        // Each question: { text, category, weights: { ideologyId: weight } }
+        // weight: positive = agreeing boosts this ideology; negative = agreeing reduces it
+        const questions = [
+            // --- ECONOMIC (1-12) ---
+            {
+                text: '政府应当对经济进行广泛干预，以保障社会公平和减少贫富差距。',
+                category: '经济制度',
+                weights: { socialism: 2, social_democracy: 2, democratic_socialism: 2, communism: 1.5, marxism: 1.5,
+                    keynesianism: 1.5, collectivism: 1.5, capitalism: -2, neoliberalism: -2, libertarianism: -2,
+                    anarcho_capitalism: -2, individualism: -1.5, mercantilism: 0.5 }
+            },
+            {
+                text: '私有财产权是神圣不可侵犯的，市场自由竞争是实现繁荣的最佳途径。',
+                category: '经济制度',
+                weights: { capitalism: 2, libertarianism: 2, neoliberalism: 2, anarcho_capitalism: 2, individualism: 1.5,
+                    conservatism: 1, communism: -2, marxism: -2, leninism: -1.5, stalinism: -1.5, maoism: -1.5,
+                    anarcho_communism: -2, collectivism: -1.5, socialism: -1 }
+            },
+            {
+                text: '国家应当拥有并管理关键产业（如能源、交通、医疗），而非交由私人资本。',
+                category: '经济制度',
+                weights: { socialism: 2, communism: 2, democratic_socialism: 2, leninism: 1.5, stalinism: 1.5, maoism: 1.5,
+                    social_democracy: 1.5, collectivism: 1.5, capitalism: -2, neoliberalism: -2, anarcho_capitalism: -2,
+                    libertarianism: -1.5, individualism: -1 }
+            },
+            {
+                text: '高税收和高福利的社会模式有利于社会整体稳定和人民幸福。',
+                category: '经济制度',
+                weights: { social_democracy: 2, democratic_socialism: 2, socialism: 1.5, keynesianism: 1.5, collectivism: 1.5,
+                    communism: 1, neoliberalism: -2, libertarianism: -2, anarcho_capitalism: -2, capitalism: -1,
+                    individualism: -1.5, conservatism: -1 }
+            },
+            {
+                text: '自由贸易和资本自由流动是经济发展的核心动力，贸易保护主义有害。',
+                category: '经济制度',
+                weights: { neoliberalism: 2, capitalism: 2, cosmopolitanism: 1.5, libertarianism: 1.5, mercantilism: -2,
+                    isolationism: -1.5, nationalism: -1, expansionism: -1, keynesianism: -0.5, socialism: -0.5 }
+            },
+            {
+                text: '国家的财富和权力取决于其贸易顺差和黄金储备，应当实施保护性关税。',
+                category: '经济制度',
+                weights: { mercantilism: 2, nationalism: 1.5, imperialism: 1, isolationism: 1, expansionism: 0.5,
+                    neoliberalism: -2, cosmopolitanism: -2, capitalism: -1, libertarianism: -1 }
+            },
+            {
+                text: '在经济衰退时，政府应当大幅增加公共支出以刺激需求和创造就业。',
+                category: '经济制度',
+                weights: { keynesianism: 2, social_democracy: 1.5, socialism: 1, collectivism: 1, neoliberalism: -1.5,
+                    libertarianism: -1, anarcho_capitalism: -1.5, capitalism: -0.5, conservatism: -0.5 }
+            },
+            {
+                text: '应当废除最低工资法，让劳动力市场自行决定工资水平。',
+                category: '经济制度',
+                weights: { neoliberalism: 2, libertarianism: 2, anarcho_capitalism: 2, capitalism: 1.5, individualism: 1,
+                    socialism: -2, social_democracy: -2, democratic_socialism: -2, communism: -1.5, collectivism: -1.5,
+                    keynesianism: -1, marxism: -1.5 }
+            },
+            {
+                text: '技术专家和科学家应当主导经济决策，而非政治家或商人。',
+                category: '经济制度',
+                weights: { technocracy: 2, corporatism: 0.5, socialism: 0.5, populism: -1, capitalism: -0.5,
+                    neoliberalism: -0.5, libertarianism: -0.5 }
+            },
+            {
+                text: '大企业和工会应当与政府三方协商，共同制定经济政策。',
+                category: '经济制度',
+                weights: { corporatism: 2, social_democracy: 1.5, democratic_socialism: 1, keynesianism: 1,
+                    collectivism: 1,
+                    neoliberalism: -1.5, libertarianism: -1, anarcho_capitalism: -1.5, capitalism: -0.5 }
+            },
+            {
+                text: '无限的经济增长是可能的也是可取的，环境问题可以用技术解决。',
+                category: '经济制度',
+                weights: { capitalism: 1.5, neoliberalism: 1.5, technocracy: 1, expansionism: 1, environmentalism: -2,
+                    anarcho_communism: -1, socialism: -0.5, democratic_socialism: -0.5 }
+            },
+            {
+                text: '经济增长必须服从于生态可持续性，即使这意味着降低生活消费水平。',
+                category: '经济制度',
+                weights: { environmentalism: 2, anarcho_communism: 1.5, socialism: 1, democratic_socialism: 1,
+                    capitalism: -2, neoliberalism: -2, expansionism: -1.5, mercantilism: -1, imperialism: -1,
+                    libertarianism: -1 }
+            },
+            // --- GOVERNMENT & AUTHORITY (13-24) ---
+            {
+                text: '一个强有力的中央领导人对国家的稳定和繁荣至关重要。',
+                category: '政府与权威',
+                weights: { authoritarianism: 2, totalitarianism: 1.5, fascism: 1.5, stalinism: 1.5, leninism: 1,
+                    national_socialism: 1.5, militarism: 1, conservatism: 0.5, anarchism: -2, anarcho_capitalism: -2,
+                    anarcho_communism: -2, libertarianism: -1.5, liberalism: -1, individualism: -1,
+                democratic_socialism: -1 }
+            },
+            {
+                text: '政治权力应当受到严格的分权和制衡，以防止任何机构或个人滥用权力。',
+                category: '政府与权威',
+                weights: { liberalism: 2, libertarianism: 1.5, social_democracy: 1.5, democratic_socialism: 1.5,
+                    anarchism: 1,
+                    totalitarianism: -2, authoritarianism: -2, fascism: -2, stalinism: -2, leninism: -1.5,
+                    national_socialism: -2, militarism: -1.5, theocracy: -1.5, feudalism: -1 }
+            },
+            {
+                text: '在危机时期，国家有权暂停公民自由以维护安全与秩序。',
+                category: '政府与权威',
+                weights: { authoritarianism: 2, totalitarianism: 1.5, fascism: 1.5, national_socialism: 1.5, militarism: 1.5,
+                    stalinism: 1, leninism: 1, conservatism: 0.5, liberalism: -2, libertarianism: -2, anarchism: -2,
+                    anarcho_capitalism: -2, anarcho_communism: -2, individualism: -1.5 }
+            },
+            {
+                text: '民主选举是唯一合法的权力来源，所有政府都必须通过自由公正的选举产生。',
+                category: '政府与权威',
+                weights: { liberalism: 2, social_democracy: 2, democratic_socialism: 2, libertarianism: 1.5,
+                    totalitarianism: -2, authoritarianism: -2, fascism: -2, stalinism: -2, leninism: -1.5, maoism: -1.5,
+                    national_socialism: -2, theocracy: -2, feudalism: -1.5, monarchism: -1.5 }
+            },
+            {
+                text: '宗教领袖应当参与国家治理，宗教教义应当成为立法的基础之一。',
+                category: '政府与权威',
+                weights: { theocracy: 2, fundamentalism: 2, conservatism: 1, feudalism: 1, liberalism: -2,
+                    libertarianism: -2,
+                    anarchism: -2, communism: -1.5, marxism: -1.5, feminism: -1.5, technocracy: -1, anarcho_capitalism: -1.5 }
+            },
+            {
+                text: '政府应当由最优秀的技术专家和科学家来管理，而非职业政客。',
+                category: '政府与权威',
+                weights: { technocracy: 2, corporatism: 0.5, populism: -1.5, fundamentalism: -1, theocracy: -1.5,
+                    liberalism: -0.5, democratic_socialism: -0.5, feudalism: -1 }
+            },
+            {
+                text: '社会等级和权威结构是自然且必要的，平等主义是一种危险的幻想。',
+                category: '政府与权威',
+                weights: { conservatism: 2, feudalism: 2, authoritarianism: 1.5, fascism: 1.5, national_socialism: 1,
+                    totalitarianism: 1, militarism: 1, anarchism: -2, anarcho_communism: -2, anarcho_capitalism: -1.5,
+                    communism: -1.5, marxism: -1.5, libertarianism: -1, feminism: -1.5, individualism: -1 }
+            },
+            {
+                text: '普通民众比精英更了解自己的利益，政治决策应当更多地反映民意。',
+                category: '政府与权威',
+                weights: { populism: 2, democratic_socialism: 1, anarchism: 1, anarcho_communism: 1, technocracy: -2,
+                    authoritarianism: -1, totalitarianism: -1, feudalism: -1, corporatism: -0.5 }
+            },
+            {
+                text: '军队应当在国家政治生活中拥有重要发言权。',
+                category: '政府与权威',
+                weights: { militarism: 2, fascism: 1.5, national_socialism: 1.5, authoritarianism: 1.5,
+                    totalitarianism: 1,
+                    imperialism: 1, expansionism: 1, liberalism: -2, anarchism: -2, libertarianism: -2,
+                    anarcho_capitalism: -1.5, democratic_socialism: -1.5, social_democracy: -1.5 }
+            },
+            {
+                text: '国家安全机构应当拥有广泛的监控权力以预防威胁。',
+                category: '政府与权威',
+                weights: { totalitarianism: 2, authoritarianism: 2, stalinism: 2, national_socialism: 1.5, fascism: 1.5,
+                    leninism: 1, militarism: 1, conservatism: 0.5, liberalism: -2, libertarianism: -2, anarchism: -2,
+                    anarcho_capitalism: -2, individualism: -1.5, anarcho_communism: -1.5 }
+            },
+            {
+                text: '应当废除所有形式的强制征税，公共服务由自愿捐款和市场竞争提供。',
+                category: '政府与权威',
+                weights: { anarcho_capitalism: 2, libertarianism: 1.5, neoliberalism: 1, individualism: 1,
+                    socialism: -2,
+                    social_democracy: -2, democratic_socialism: -2, communism: -2, keynesianism: -2, collectivism: -2,
+                    marxism: -1.5, leninism: -1.5 }
+            },
+            {
+                text: '一个统治精英的先锋队应当领导国家走向更高级的社会形态。',
+                category: '政府与权威',
+                weights: { leninism: 2, stalinism: 2, maoism: 2, marxism: 1, communism: 1, totalitarianism: 1,
+                    authoritarianism: 1, trotskyism: 1.5, liberalism: -2, libertarianism: -2, anarchism: -2,
+                    anarcho_capitalism: -2, anarcho_communism: -2, democratic_socialism: -1.5, social_democracy: -1.5 }
+            },
+            // --- SOCIAL & CULTURAL (25-34) ---
+            {
+                text: '传统价值观和习俗是社会稳定的基石，应当得到维护和弘扬。',
+                category: '社会文化',
+                weights: { conservatism: 2, fundamentalism: 2, feudalism: 1.5, theocracy: 1.5, nationalism: 1,
+                    fascism: 0.5,
+                    liberalism: -1, feminism: -1.5, anarchism: -1, libertarianism: -1, individualism: -0.5,
+                    cosmopolitanism: -1 }
+            },
+            {
+                text: '性别平等是社会进步的标志，应当积极消除一切形式的性别歧视。',
+                category: '社会文化',
+                weights: { feminism: 2, liberalism: 1.5, social_democracy: 1.5, democratic_socialism: 1.5,
+                    anarchism: 1,
+                    cosmopolitanism: 1, conservatism: -1.5, fundamentalism: -2, theocracy: -2, feudalism: -1.5,
+                    fascism: -1, national_socialism: -1, stalinism: -0.5 }
+            },
+            {
+                text: '个人自由比集体利益更重要，每个人都应该有权按自己的方式生活。',
+                category: '社会文化',
+                weights: { individualism: 2, libertarianism: 2, liberalism: 1.5, anarcho_capitalism: 1.5, anarchism: 1,
+                    collectivism: -2, communism: -1.5, marxism: -1.5, leninism: -1.5, stalinism: -1.5, maoism: -1.5,
+                    fascism: -1.5, national_socialism: -1.5, totalitarianism: -1.5, corporatism: -1, feudalism: -1 }
+            },
+            {
+                text: '集体利益高于个人利益，个人应当为集体做出牺牲。',
+                category: '社会文化',
+                weights: { collectivism: 2, communism: 2, marxism: 2, leninism: 1.5, stalinism: 1.5, maoism: 1.5,
+                    fascism: 1.5, national_socialism: 1.5, socialism: 1, militarism: 1, individualism: -2,
+                    libertarianism: -2,
+                    anarcho_capitalism: -2, liberalism: -1, anarchism: -1 }
+            },
+            {
+                text: '环境保护应当优先于经济发展，即使这意味着牺牲就业机会。',
+                category: '社会文化',
+                weights: { environmentalism: 2, anarcho_communism: 1, socialism: 0.5, democratic_socialism: 0.5,
+                    capitalism: -2, neoliberalism: -2, expansionism: -1.5, mercantilism: -1.5, imperialism: -1,
+                    libertarianism: -1, anarcho_capitalism: -1 }
+            },
+            {
+                text: '社会应当鼓励多元文化和生活方式的共存，而非追求单一的文化标准。',
+                category: '社会文化',
+                weights: { liberalism: 2, cosmopolitanism: 2, feminism: 1.5, anarchism: 1.5, libertarianism: 1,
+                    conservatism: -2, fundamentalism: -2, theocracy: -2, fascism: -1.5, national_socialism: -1.5,
+                    nationalism: -1.5, feudalism: -1 }
+            },
+            {
+                text: '堕胎在任何情况下都应当被禁止，生命从受孕开始就应当受到保护。',
+                category: '社会文化',
+                weights: { fundamentalism: 2, theocracy: 2, conservatism: 1.5, feudalism: 1, feminism: -2,
+                    liberalism: -1.5,
+                    libertarianism: -1, anarchism: -1, social_democracy: -1, democratic_socialism: -1 }
+            },
+            {
+                text: '国家应当积极推动民族文化的统一，减少外来文化的影响。',
+                category: '社会文化',
+                weights: { nationalism: 2, conservatism: 1.5, fascism: 1.5, national_socialism: 1.5, populism: 1,
+                    isolationism: 1, cosmopolitanism: -2, liberalism: -1.5, anarchism: -1, libertarianism: -1,
+                    anarcho_capitalism: -1 }
+            },
+            {
+                text: '对现有制度的批判和质疑是推动社会进步的重要力量。',
+                category: '社会文化',
+                weights: { liberalism: 1.5, anarchism: 1.5, libertarianism: 1, feminism: 1.5, environmentalism: 1,
+                    democratic_socialism: 1, totalitarianism: -2, authoritarianism: -2, stalinism: -2, fascism: -2,
+                    national_socialism: -2, fundamentalism: -2, theocracy: -2, feudalism: -1.5, conservatism: -1 }
+            },
+            {
+                text: '家庭是社会的基本单位，其传统结构（父母子女）应当受到法律的特殊保护。',
+                category: '社会文化',
+                weights: { conservatism: 2, fundamentalism: 1.5, theocracy: 1.5, feudalism: 1, nationalism: 0.5,
+                    fascism: 0.5,
+                    feminism: -1.5, anarchism: -1, libertarianism: -0.5, individualism: -0.5, cosmopolitanism: -1 }
+            },
+            // --- INTERNATIONAL RELATIONS (35-42) ---
+            {
+                text: '本国利益应当始终优先于国际合作和全球公益。',
+                category: '国际关系',
+                weights: { nationalism: 2, isolationism: 1.5, mercantilism: 1.5, populism: 1.5, imperialism: 1,
+                    expansionism: 1, cosmopolitanism: -2, anarchism: -1, environmentalism: -1.5, socialism: -1,
+                    trotskyism: -1 }
+            },
+            {
+                text: '国家应当积极参与全球事务，通过国际合作应对共同挑战。',
+                category: '国际关系',
+                weights: { cosmopolitanism: 2, social_democracy: 1.5, liberalism: 1.5, environmentalism: 1.5,
+                    democratic_socialism: 1, isolationism: -2, nationalism: -1.5, mercantilism: -1, populism: -1,
+                    fascism: -1, national_socialism: -1 }
+            },
+            {
+                text: '国家应当避免卷入外国战争和冲突，专注于国内事务。',
+                category: '国际关系',
+                weights: { isolationism: 2, anarchism: 1, libertarianism: 1, populism: 0.5, expansionism: -2,
+                    imperialism: -2,
+                    militarism: -2, fascism: -1.5, national_socialism: -1.5, trotskyism: -1.5, cosmopolitanism: -1,
+                    leninism: -1 }
+            },
+            {
+                text: '强大的国家有权通过军事力量扩展其势力和领土。',
+                category: '国际关系',
+                weights: { expansionism: 2, imperialism: 2, fascism: 2, national_socialism: 2, militarism: 2,
+                    mercantilism: 1,
+                    isolationism: -2, anarchism: -2, cosmopolitanism: -2, environmentalism: -1.5, liberalism: -1.5,
+                    libertarianism: -1.5, social_democracy: -1.5 }
+            },
+            {
+                text: '移民应当受到严格控制，以保护本国文化和就业市场。',
+                category: '国际关系',
+                weights: { nationalism: 2, populism: 2, isolationism: 1.5, conservatism: 1.5, fascism: 1,
+                    national_socialism: 1, mercantilism: 0.5, cosmopolitanism: -2, liberalism: -1.5, anarchism: -1.5,
+                    libertarianism: -1, socialism: -0.5 }
+            },
+            {
+                text: '世界应当走向一个没有国界的全球共同体。',
+                category: '国际关系',
+                weights: { cosmopolitanism: 2, anarcho_communism: 1.5, anarchism: 1.5, trotskyism: 1.5, communism: 1,
+                    socialism: 0.5, nationalism: -2, fascism: -2, national_socialism: -2, isolationism: -2,
+                    conservatism: -1.5, mercantilism: -1.5, populism: -1, expansionism: -2, imperialism: -2 }
+            },
+            {
+                text: '对外援助是富裕国家的道德责任，即使这意味着本国纳税人承担成本。',
+                category: '国际关系',
+                weights: { cosmopolitanism: 2, social_democracy: 1.5, socialism: 1, democratic_socialism: 1,
+                    environmentalism: 1, isolationism: -2, nationalism: -1.5, populism: -1.5, libertarianism: -1.5,
+                    anarcho_capitalism: -1.5, neoliberalism: -1, mercantilism: -1 }
+            },
+            {
+                text: '国际贸易协定应当优先保护本国工人和产业，而非追求自由贸易。',
+                category: '国际关系',
+                weights: { mercantilism: 2, nationalism: 1.5, populism: 1.5, isolationism: 1, socialism: 1,
+                    keynesianism: 1,
+                    neoliberalism: -2, capitalism: -1, cosmopolitanism: -1.5, libertarianism: -1.5,
+                anarcho_capitalism: -1 }
+            },
+            // --- METHODS & CHANGE (43-50) ---
+            {
+                text: '暴力革命是推翻不公正制度的正当手段。',
+                category: '变革路径',
+                weights: { communism: 2, marxism: 2, leninism: 2, maoism: 2, trotskyism: 2, anarcho_communism: 1.5,
+                    anarchism: 1, fascism: 0.5, national_socialism: 0.5, reformism: -2, social_democracy: -2,
+                    democratic_socialism: -1.5, liberalism: -1.5, conservatism: -2, libertarianism: -1.5,
+                    anarcho_capitalism: -1 }
+            },
+            {
+                text: '社会进步应当通过和平、渐进的改革而非激进革命来实现。',
+                category: '变革路径',
+                weights: { reformism: 2, social_democracy: 2, democratic_socialism: 1.5, liberalism: 1.5,
+                    conservatism: 1,
+                    communism: -2, leninism: -2, maoism: -2, trotskyism: -1.5, anarcho_communism: -1.5, anarchism: -1,
+                    fascism: -0.5 }
+            },
+            {
+                text: '对政治理论的原则性坚持比根据现实情况灵活调整更重要。',
+                category: '变革路径',
+                weights: { fundamentalism: 2, stalinism: 1.5, maoism: 1.5, leninism: 1, theocracy: 1.5,
+                    revisionism: -2,
+                    reformism: -1.5, social_democracy: -1, democratic_socialism: -1, technocracy: -1, liberalism: -1 }
+            },
+            {
+                text: '政治理论和策略应当根据时代变化和实践经验不断修正。',
+                category: '变革路径',
+                weights: { revisionism: 2, reformism: 1.5, social_democracy: 1.5, democratic_socialism: 1,
+                    technocracy: 1,
+                    liberalism: 1, fundamentalism: -2, stalinism: -2, maoism: -1.5, theocracy: -2, leninism: -1,
+                    anarcho_communism: -0.5 }
+            },
+            {
+                text: '工人阶级应当通过工会和集体谈判来争取权益，而非推翻资本主义制度。',
+                category: '变革路径',
+                weights: { social_democracy: 2, democratic_socialism: 1.5, corporatism: 1.5, reformism: 1.5,
+                    keynesianism: 1,
+                    communism: -2, marxism: -2, leninism: -2, maoism: -2, trotskyism: -2, anarcho_communism: -1.5,
+                    anarchism: -1 }
+            },
+            {
+                text: '任何真正的变革都必须从根本上推翻现有的整个制度体系。',
+                category: '变革路径',
+                weights: { communism: 2, marxism: 2, leninism: 2, maoism: 2, anarcho_communism: 2, anarchism: 1.5,
+                    trotskyism: 2, reformism: -2, social_democracy: -2, democratic_socialism: -2, liberalism: -1.5,
+                    conservatism: -2, revisionism: -1.5, corporatism: -1 }
+            },
+            {
+                text: '个人应当完全对自己的生活负责，政府不应提供过多的社会保障。',
+                category: '变革路径',
+                weights: { individualism: 2, libertarianism: 2, anarcho_capitalism: 2, neoliberalism: 1.5,
+                    capitalism: 1,
+                    conservatism: 0.5, socialism: -2, social_democracy: -2, democratic_socialism: -2, communism: -1.5,
+                    collectivism: -2, keynesianism: -1.5, marxism: -1 }
+            },
+            {
+                text: '社会变革应当由觉醒的群众自下而上推动，而非由精英或政党自上而下领导。',
+                category: '变革路径',
+                weights: { anarchism: 2, anarcho_communism: 2, populism: 1.5, maoism: 1, trotskyism: 1, leninism: -2,
+                    stalinism: -2, authoritarianism: -1.5, totalitarianism: -1.5, technocracy: -1.5, corporatism: -1,
+                    vanguardism: -2 }
+            },
+        ];
+
+        // ==================== APP STATE ====================
+        let currentQuestion = 0;
+        let answers = new Array(questions.length).fill(null); // null or 1-5
+        const likertLabels = ['完全不同意', '不太同意', '中立', '比较同意', '完全同意'];
+
+        // ==================== DOM REFS ====================
+        const $startPage = document.getElementById('startPage');
+        const $quizPage = document.getElementById('quizPage');
+        const $resultsPage = document.getElementById('resultsPage');
+        const $qNum = document.getElementById('qNum');
+        const $qCat = document.getElementById('qCat');
+        const $qText = document.getElementById('qText');
+        const $optionsGroup = document.getElementById('optionsGroup');
+        const $progressBar = document.getElementById('progressBar');
+        const $btnPrev = document.getElementById('btnPrev');
+        const $btnNext = document.getElementById('btnNext');
+        const $topResults = document.getElementById('topResults');
+        const $allScores = document.getElementById('allScores');
+
+        // ==================== FUNCTIONS ====================
+        function showPage(page) {
+            $startPage.style.display = 'none';
+            $quizPage.style.display = 'none';
+            $resultsPage.style.display = 'none';
+            page.style.display = 'block';
+            if (page === $quizPage) page.classList.add('quiz-page');
+        }
+
+        function startQuiz() {
+            currentQuestion = 0;
+            answers = new Array(questions.length).fill(null);
+            showPage($quizPage);
+            renderQuestion();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            answers = new Array(questions.length).fill(null);
+            showPage($startPage);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderQuestion() {
+            const q = questions[currentQuestion];
+            $qNum.textContent = currentQuestion + 1;
+            $qCat.textContent = q.category;
+            $qText.textContent = q.text;
+            $progressBar.style.width = ((currentQuestion + 1) / questions.length * 100) + '%';
+
+            // Render options
+            $optionsGroup.innerHTML = '';
+            for (let i = 0; i < 5; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                if (answers[currentQuestion] === i + 1) btn.classList.add('selected');
+                btn.innerHTML = `<span class="opt-dot"></span><span>${likertLabels[i]}</span>`;
+                btn.addEventListener('click', () => selectOption(i + 1));
+                $optionsGroup.appendChild(btn);
+            }
+
+            // Update nav buttons
+            $btnPrev.disabled = currentQuestion === 0;
+            if (currentQuestion === questions.length - 1) {
+                $btnNext.textContent = '提交 →';
+            } else {
+                $btnNext.textContent = '下一题 →';
+            }
+        }
+
+        function selectOption(val) {
+            answers[currentQuestion] = val;
+            // Update visual
+            const btns = $optionsGroup.querySelectorAll('.option-btn');
+            btns.forEach((b, i) => {
+                b.classList.toggle('selected', i + 1 === val);
+            });
+        }
+
+        function nextQuestion() {
+            if (answers[currentQuestion] === null) {
+                showToast('请先选择一个选项');
+                return;
+            }
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+                $quizPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                // Submit
+                calculateResults();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+                $quizPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
+
+        // ==================== SCORING ====================
+        function calculateResults() {
+            // Initialize scores
+            const scores = new Array(ideologies.length).fill(0);
+
+            // For each question, compute contribution
+            for (let qi = 0; qi < questions.length; qi++) {
+                const answerVal = answers[qi]; // 1-5
+                const scaledAnswer = answerVal - 3; // -2 to +2
+                const weights = questions[qi].weights;
+                for (const [ideId, weight] of Object.entries(weights)) {
+                    const idx = ideologyIndex[ideId];
+                    if (idx !== undefined) {
+                        scores[idx] += scaledAnswer * weight;
+                    }
+                }
+            }
+
+            // Normalize to 0-100 range
+            // Find min and max possible scores roughly, or just use softmax-like normalization
+            const maxPossible = questions.length * 2 * 2; // rough max
+            const normalized = scores.map(s => {
+                // Sigmoid-like normalization centered at 0
+                const ratio = s / (maxPossible * 0.4); // scale factor
+                const clamped = Math.max(-1, Math.min(1, ratio));
+                // Map to 0-100
+                return Math.round((clamped + 1) * 50);
+            });
+
+            // Create results array
+            const results = ideologies.map((ide, i) => ({
+                ...ide,
+                rawScore: scores[i],
+                score: normalized[i],
+            }));
+
+            // Sort by score descending
+            results.sort((a, b) => b.score - a.score);
+
+            // Render
+            renderResults(results);
+            showPage($resultsPage);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderResults(results) {
+            // Top 8 detailed
+            const top8 = results.slice(0, 8);
+            const barColors = [
+                'linear-gradient(90deg, #c49b3f, #e0b860)',
+                'linear-gradient(90deg, #b8a050, #d4c070)',
+                'linear-gradient(90deg, #a09060, #c0b080)',
+                'linear-gradient(90deg, #908870, #b0a890)',
+                'linear-gradient(90deg, #807880, #a098a0)',
+                'linear-gradient(90deg, #706880, #9088a0)',
+                'linear-gradient(90deg, #605878, #807898)',
+                'linear-gradient(90deg, #504870, #706890)',
+            ];
+
+            let topHTML = '';
+            top8.forEach((r, i) => {
+                const isHighlight = i === 0;
+                topHTML += `
+                <div class="top-result ${isHighlight ? 'highlight' : ''}">
+                    <div class="rank-badge">#${i + 1}</div>
+                    <div class="ideology-name">${r.name}</div>
+                    <div class="score-text">匹配度：<strong>${r.score}%</strong></div>
+                    <div class="score-bar-wrap">
+                        <div class="score-bar-fill" style="width:${r.score}%;background:${barColors[i] || barColors[7]};"></div>
+                    </div>
+                    <div class="explanation">${r.desc}</div>
+                </div>`;
+            });
+            $topResults.innerHTML = topHTML;
+
+            // All scores grid
+            let gridHTML = '<h4 style="margin-bottom:12px;color:var(--text-secondary);letter-spacing:1px;">全部41种意识形态得分</h4>';
+            results.forEach((r) => {
+                const fillColor = r.score >= 60 ? 'var(--accent)' : r.score >= 40 ? '#8a8a6a' :
+                '#5a5a6a';
+                gridHTML += `
+                <div class="all-score-row">
+                    <span>${r.name}</span>
+                    <span style="font-size:0.8em;color:var(--text-secondary);min-width:35px;text-align:right;">${r.score}%</span>
+                    <div class="mini-bar"><div class="mini-fill" style="width:${r.score}%;background:${fillColor};"></div></div>
+                </div>`;
+            });
+            $allScores.innerHTML = gridHTML;
+
+            // Animate bars
+            setTimeout(() => {
+                const fills = document.querySelectorAll('.score-bar-fill');
+                fills.forEach(f => {
+                    const w = f.style.width;
+                    f.style.width = '0%';
+                    requestAnimationFrame(() => {
+                        f.style.width = w;
+                    });
+                });
+            }, 200);
+        }
+
+        // ==================== INIT ====================
+        showPage($startPage);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if ($quizPage.style.display !== 'none' && $quizPage.style.display !== '') {
+                if (e.key === 'ArrowRight' || e.key === 'Enter') {
+                    e.preventDefault();
+                    nextQuestion();
+                } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    prevQuestion();
+                } else if (e.key >= '1' && e.key <= '5') {
+                    e.preventDefault();
+                    selectOption(parseInt(e.key));
+                }
+            }
+        });
+
+        console.log('政治主义倾向测试已就绪 | 41种意识形态 | 50道题目');
+        console.log('使用键盘 1-5 选择选项，← → 导航，Enter 确认');
+    </script>
+
+    <footer style="text-align:center;padding:30px 20px 20px;color:var(--text-secondary);font-size:0.85em;letter-spacing:1px;display:flex;flex-direction:column;gap:10px;align-items:center;">
+        <a href="https://github.com/LuoYue-cn/political-tendencies-test" target="_blank" rel="noopener noreferrer"
+           style="color:var(--accent);text-decoration:none;transition:color 0.3s;"
+           onmouseover="this.style.color='#e0b860'"
+           onmouseout="this.style.color='var(--accent)'">
+            📂 点击跳转到GitHub开源地址
+        </a>
+        <a href="https://github.com/LuoYue-cn" target="_blank" rel="noopener noreferrer"
+           style="color:var(--accent);text-decoration:none;transition:color 0.3s;"
+           onmouseover="this.style.color='#e0b860'"
+           onmouseout="this.style.color='var(--accent)'">
+            👤 点击跳转到我的GitHub主页：LuoYue🏳️‍⚧️
+        </a>
+    </footer>
+
+</body>
+</html>
